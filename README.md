@@ -6,13 +6,13 @@ Criação de um Gerador de Senhas em Python como exercício da mentoria Conquist
 
 ## Lista de Tarefas
 
-[] Armazenar o site/software para o qual a senha será gerada
+[x] Armazenar o site/software para o qual a senha será gerada
 
-[] Armazenar o usuário ou e-mail
+[x] Armazenar o usuário ou e-mail
 
-[] Possibilitar a configuração do tamanho da senha
+[x] Possibilitar a configuração do tamanho da senha
 
-[] Tocar música ao fundo ao iniciar programa
+[x] Tocar música ao fundo ao iniciar programa
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/MuriloHeyde89/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/murilo-heyde/)
