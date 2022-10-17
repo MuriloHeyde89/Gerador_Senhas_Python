@@ -1,7 +1,6 @@
 import random
 import PySimpleGUI as sg
 import os
-from typing import List
 from playsound import playsound
 
 class PassGen:
@@ -16,10 +15,14 @@ class PassGen:
             sg.Input(key='usuario', size=(20, 1))],
             [sg.Text('Quantidade de caracteres'), sg.Combo(values=list(
                 range(30)),key='total_chars', default_value=1, size=(3, 1))],
-            [sg.Output(size=(32, 5))],
-            [sg.Button('Gerar Senha')]
+            [sg.Text('As senhas geradas estão sendo salvas no arquivo:',key='caminho_arquivo', size=(51,1))],
+            [sg.Multiline(os.getcwd() + '\senhas.txt', disabled=True, size=(51,1))],
+            [sg.Text('Nova senha gerada: ', size=(51,1))],
+            [sg.Multiline('', disabled=True, size=(50,1), key='out')],
+            [sg.Button('Gerar Senha', size=(10,1))],
+            {sg.Button('Limpar Tela', size=(10,1))}
         ]
-        # Declarar janela
+        #janela
         self.janela = sg.Window('Password Generator', layout)
 
     def Iniciar(self):
@@ -29,22 +32,25 @@ class PassGen:
                 break
             if evento == 'Gerar Senha':
                 nova_senha = self.gerar_senha(valores)
-                print(nova_senha)
+                self.janela.find_element('out').Update(nova_senha)
                 self.salvar_senha(nova_senha, valores)
+            if evento == 'Limpar Tela':
+                self.limpar_output()
     
     def gerar_senha(self, valores):
-        char_list = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop rstuwxyz123456789!#$%¨&*'
+        char_list = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop rstuwxyz123456789!#$%¨*'
         chars = random.choices(char_list, k=int(valores['total_chars']))
         new_pass = ''.join(chars)
         return new_pass
 
     def salvar_senha(self, nova_senha, valores):
         with open('senhas.txt', 'a', newline='') as arquivo:
-            arquivo.white(f"site: {valores['site']}, usuario: {valores['usuario']}, nova senha: {nova_senha}")
-
-        print('Arquivo salvo')
+            arquivo.write(
+                f"site: {valores['site']}, usuario: {valores['usuario']}, nova senha: {nova_senha}\n")
+    
+    def limpar_output(self):
+        self.janela.FindElement('out').Update('')
 
 
 gen = PassGen()
 gen.Iniciar() 
-
