@@ -9,21 +9,21 @@ class PassGen:
         sg.theme('Dark2')
         playsound('fundo.mp3', block=False)
         layout = [
-            [sg.Text('Site/Software', size=(10, 1)),
+            [sg.Text('Site/Software', size=(12, 1)),
             sg.Input(key='site', size=(20, 1))],
-            [sg.Text('E-mail/Usuário', size=(10, 1)),
+            [sg.Text('E-mail/Usuário', size=(12, 1)),
             sg.Input(key='usuario', size=(20, 1))],
             [sg.Text('Quantidade de caracteres'), sg.Combo(values=list(
-                range(30)),key='total_chars', default_value=1, size=(3, 1))],
+                range(30)),key='total_chars', default_value=1, size=(4, 1))],
             [sg.Text('As senhas geradas estão sendo salvas no arquivo:',key='caminho_arquivo', size=(51,1))],
             [sg.Multiline(os.getcwd() + '\senhas.txt', disabled=True, size=(51,1))],
             [sg.Text('Nova senha gerada: ', size=(51,1))],
             [sg.Multiline('', disabled=True, size=(50,1), key='out')],
-            [sg.Button('Gerar Senha', size=(10,1))],
-            {sg.Button('Limpar Tela', size=(10,1))}
+            [sg.Button('Gerar Senha', size=(13,1))],
+            {sg.Button('Limpar Tela', size=(13,1))}
         ]
         #janela
-        self.janela = sg.Window('Password Generator', layout)
+        self.janela = sg.Window('Gerador de Senhas', layout)
 
     def Iniciar(self):
         while True:
