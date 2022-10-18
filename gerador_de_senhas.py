@@ -6,7 +6,7 @@ from playsound import playsound
 class PassGen:
     def __init__(self):
         #Layout
-        sg.theme('Black')
+        sg.theme('Dark2')
         playsound('fundo.mp3', block=False)
         layout = [
             [sg.Text('Site/Software', size=(10, 1)),
