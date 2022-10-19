@@ -1,4 +1,5 @@
 import random
+from tkinter import Button, mainloop
 import PySimpleGUI as sg
 import os
 from playsound import playsound
@@ -19,7 +20,7 @@ class PassGen:
             [sg.Multiline(os.getcwd() + '\senhas.txt', disabled=True, size=(51,1))],
             [sg.Text('Nova senha gerada: ', size=(51,1))],
             [sg.Multiline('', disabled=True, size=(50,1), key='out')],
-            [sg.Button('Gerar Senha', size=(13,1))],
+            [sg.Button('Gerar Senha', size=(13,1)), sg.Button('Sair', size=(13,1))], 
             {sg.Button('Limpar Tela', size=(13,1))}
         ]
         #janela
@@ -36,6 +37,8 @@ class PassGen:
                 self.salvar_senha(nova_senha, valores)
             if evento == 'Limpar Tela':
                 self.limpar_output()
+            if evento == 'Sair':
+                self.botao_sair()
     
     def gerar_senha(self, valores):
         char_list = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop rstuwxyz123456789!#$%¨*'
@@ -50,7 +53,13 @@ class PassGen:
     
     def limpar_output(self):
         self.janela.FindElement('out').Update('')
-
+    
+    #criando botão sair (Pesquisando, sem cópia!)
+    def botao_sair(self, Sair):
+        self.botao_sair = Button(self.janela, text= 'Sair', command=self.janela.quit)
+        self.botao.pack()
+        self.botao_sair.pack()
+        mainloop()
 
 gen = PassGen()
 gen.Iniciar() 

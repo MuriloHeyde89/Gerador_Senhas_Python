@@ -12,6 +12,8 @@ Criação de um Gerador de Senhas em Python como exercício da mentoria Conquist
 
 [x] Possibilitar a configuração do tamanho da senha
 
+[x] Adicionar botão sair
+
 [x] Tocar música ao fundo ao iniciar programa
 
 ## 🔗 Links
