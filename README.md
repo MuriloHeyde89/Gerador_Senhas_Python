@@ -7,7 +7,7 @@ Uma Criação de um Gerador de Senhas, na linguagem Python, usando PySimpleGui, 
 
 ## Lista de Tarefas
 
-[x] Armazenar o site/software para o qual a senha será gerada
+[x] Armazenar informações site/software para o qual a senha será gerada
 
 [x] Armazenar o usuário ou e-mail
 
@@ -21,6 +21,7 @@ Uma Criação de um Gerador de Senhas, na linguagem Python, usando PySimpleGui, 
 ## Uso da aplicação
 
 Através da interface Gráfica do PySimpleGui, será totalmente utilizavel o seu Gerador de Senhas, conforme podemos ver abaixo:
+
 ![tela inicial gerador de senhas](https://user-images.githubusercontent.com/115501310/199019204-fd99b24e-6259-463b-8932-a97f5558247e.JPG)
 
 
@@ -30,7 +31,6 @@ Através da interface Gráfica do PySimpleGui, será totalmente utilizavel o seu
 [x] Python
 [x] PySimpleGui
 [x] VsCode
-
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/MuriloHeyde89/)
