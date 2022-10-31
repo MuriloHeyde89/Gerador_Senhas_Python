@@ -1,9 +1,1 @@
-site: asdfsad, usuario: dasdfasd, nova senha: Q
-site: asdfsad, usuario: dasdfasd, nova senha: Xk2H1FfI
-site: asdfsad, usuario: dasdfasd, nova senha: FIBm4P7hoirB*!iR5
-site: youtube, usuario: murilo.heyde89@gmail.com, nova senha: af58hw
-site: linkedin, usuario: murilo.heyde89@gmail.com, nova senha: 8
-site: linkedin, usuario: murilo.heyde89@gmail.com, nova senha: gpmtSO
-site: linkedin, usuario: murilo.heyde89@gmail.com, nova senha: Q6Ww9y
-site: facebook, usuario: murilo.heyde89@gmail.com, nova senha: cdkZFVQwFM
-site: , usuario: , nova senha: G
+
